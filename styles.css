@@ -4,12 +4,13 @@
     --accent-color: #cb1c22;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Lato:ital@0;1&family=Tenor+Sans&family=Yellowtail&display=swap');
-
+.text-color {
+    color: var(--text-color);
+}
 
 body {
     background-color: #422e2f;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -18,10 +19,87 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: url("https://www.thespruce.com/thmb/9Z3Z1Z5Z2Z3Z2Z2Z2Z2Z2Z2Z2-5c0d9b0b46e0fb0001b6b0a5.jpg");
 }
 
-h1 {
-    color: var(--accent-color);
-    font-family: 'Yellowtail', cursive;
+header {
+    height: 40dvh;
+    font-size: 1.3rem;
+    overflow-y: hidden;
+    margin-bottom: 4rem;
 }
+.blur:after {
+    content: "";
+    position: absolute;
+    filter: brightness(1);
+    z-index: 1;
+    bottom: 60dvh;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to top,var(--primary-color), rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 4em;
+  }
+
+.header-image {
+    background-image: url(car.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-burn;    
+    filter: brightness(0.3);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 40dvh;
+}
+
+.heading {
+    font-family: 'Rubik', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+.blinker { 
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,0,0,1);
+    animation-duration: 1s;
+    display: inline-flex;
+    width: 2px;
+    height: 1.1em;
+    margin-left: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(white,.3);
+    background: var(--accent-color);
+    transform: translateY(3px);
+  }
+  
+  @keyframes blinker { 
+    from { opacity: 1.0; } to { opacity: 0.0; }
+  }
