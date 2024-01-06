@@ -10,7 +10,7 @@ body {
 }
 
 .hero-banner {
-    background: url('path-to-your-car-image.jpg') center/cover no-repeat;
+    background: url('car.jpg') center/cover no-repeat;
     background-blend-mode: multiply;
     background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red overlay */
     text-align: center;
