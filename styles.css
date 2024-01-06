@@ -2,24 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
-}
-
-header {
-    background-color: #004d99;
     color: #fff;
+    background-color: #ff0000; /* Red theme */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero-banner {
+    background: url('path-to-your-car-image.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red overlay */
     text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p {
-    font-size: 1.2em;
+    padding: 50px 0;
 }
 
 section {
@@ -28,18 +23,15 @@ section {
 }
 
 section h2 {
-    color: #333;
-    margin-bottom: 10px;
+    color: #fff;
 }
 
 footer {
-    background-color: #333;
+    background-color: #990000; /* Darker shade of red */
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 /* Add responsive design, animations, and additional styling as needed */
